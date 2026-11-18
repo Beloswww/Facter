@@ -1,0 +1,29 @@
+﻿body {
+}
+
+/* 在左側顯示模態框 */
+.modal-lg {
+    max-width: none;
+}
+
+.modal-dialog {
+    width: 90%;
+    margin: auto;
+}
+
+/* 在左側顯示模態框的樣式 */
+@media (min-width: 768px) {
+    .modal-open .modal {
+        transform: translateX(-50%);
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+
+    .modal-open .modal-dialog {
+        max-width: 90%;
+        margin: auto;
+    }
+}

@@ -1,0 +1,293 @@
+﻿@{
+    Layout = null;
+}
+<!-- 註冊頁面得死 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #E6E6FA;
+            color: #343a40;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            /*margin: 50px ;*/
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin-top:100px;
+        }
+
+        .privacy-policy-container {
+            display: none; /* 隐私权同意书默认隐藏 */
+            background-color: #fff;
+            color: #000;
+            /*border: 2px solid #007bff;*/
+            border: 1px solid #F0F0F0;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.1);
+            overflow: auto;
+            height: 35vh; /* 調整高度 */
+            font-size: 14px;
+            width: 85%;
+            margin-left: 70px; /* 將左邊距設為自動，使其置中 */
+            margin-top: 40px;
+        }
+
+            .privacy-policy-container h2 {
+                font-size: 24px;
+                color: #007bff;
+            }
+
+
+        .your-image-container-class {
+            display: block; /* 如果图像容器默认显示，可以将其改为 'block' */
+        }
+
+        .col {
+            width: 48%;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FF9797;
+        }
+
+        h2 {
+            text-align: center;
+            color: #000;
+        }
+        
+        .mb-3 {
+            margin-bottom: 20px;
+        }
+
+        /* 註冊按鈕樣式 */
+        input[type="submit"] {
+            width: 20%; /* 設定具體的寬度，這裡設定為 50% */
+            padding: 7px;
+            border-radius: 5px;
+            background-color: #FF9797;
+            color: #fff;
+            font-size: 14px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        input[type="file"] {
+            width: 100%;
+        }
+
+        .form-check-label {
+            font-size: 14px;
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        h3 {
+            color: #dc3545;
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .your-image-container-class img {
+            max-width: 70%; /* 图片最大宽度为容器宽度 */
+            max-height: 70%; /* 图片最大高度为容器高度 */
+            width: auto; /* 自动调整宽度 */
+            height: auto; /* 自动调整高度 */
+            margin-left: 60px; /* 將左邊距設為自動，使其置中 */
+            margin-top: 15%;
+
+        }
+
+    </style>
+
+</head>
+
+<!-- 註冊資料(包含姓名、學號、密碼、照片) -->
+<body>
+    <div class="container mt-5">
+        <div class="row gx-6">
+            <!-- 左半部 -->
+            <div class="col-md-6 ">
+                <div class="your-image-container-class" >
+                    <img src="~/images/per.png" alt="Your Image">
+
+                </div>
+                <div class="privacy-policy-container" style="margin-top: 22%">
+
+                    <h2 style="color:black"> 隱私權取用同意書</h2>
+                    <p>
+                        <strong>一、簡介</strong>
+                        <br><br>
+                        本隱私權取用同意書（以下簡稱「同意書」）旨在確保您（以下簡稱「使用者」）對於提供帳號、密碼和名字等個人資訊的同意和了解。請在使用本服務前詳細閱讀本同意書。
+
+                        <br><br>
+                        <strong> 二、同意條款</strong>
+                        <br><br>
+
+                        帳號和密碼提供： 使用者同意並理解，在使用本服務時，可能需要提供帳號、密碼等個人識別資訊。使用者應確保提供的資訊正確、完整且最新。
+                        資訊保護： 本服務承諾採取合理的技術手段，確保使用者提供的個人資訊在存儲和傳輸過程中的安全性。
+                        資訊用途： 使用者同意提供的帳號、密碼等個人資訊，將僅用於提供相應的服務，不會被用於其他未經同意的用途。
+                        第三方機構： 使用者理解，為提供更全面的服務，本服務可能會與第三方機構進行合作。在這種情況下，使用者的個人資訊可能會被分享，但本服務將確保這些機構也遵守相應的隱私標準。
+                        隱私權權利： 使用者有權查詢、更正、刪除其提供的個人資訊，並有權隨時撤回同意。使用者可通過本服務提供的聯繫方式行使這些權利。
+
+                        <br><br>
+                        <strong>  三、同意生效</strong>
+                        <br><br>
+
+                        使用者在使用本服務的同時即被視為已經閱讀並同意本同意書的所有條款。如果使用者不同意本同意書的任何條款，應停止使用本服務。
+
+                        <br><br>
+                        <strong>  四、變更和通知效</strong>
+                        <br><br>
+
+                        本服務有權隨時修改本同意書的條款，修改後的條款將在網站上發布。使用者應定期查看本同意書以瞭解任何變更。對於重大變更，本服務將發送通知，請使用者密切關注相關訊息。
+
+                        <br><br>
+                        <strong>  五、聯絡我們 </strong>
+                        <br><br>
+
+                        如對本同意書有任何疑問或疑慮，請通過以下方式聯絡我們：
+
+                        [聯絡方式]
+
+                        <br><br>
+                        <strong>    六、生效日期</strong>
+                        <br><br>
+
+                        本同意書於[生效日期]生效。
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-md-5">
+                <form method="post" action="@Url.Action("StudentRegister")" enctype="multipart/form-data">
+                    <h1>Register</h1>
+                    <br />
+                    <div></div>
+                    <!-- 姓名 -->
+                    <div class="mb-3 row">
+                        <label for="name" class="form-label col-sm-3">Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="Name" />
+                        </div>
+                    </div>
+
+                    <!-- 系所 -->
+                    <div class="mb-3 row">
+                        <label for="department" class="form-label col-sm-3">Department:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="Department" />
+                        </div>
+                    </div>
+
+                    <!-- 年級 -->
+                    <div class="mb-3 row">
+                        <label for="grade" class="form-label col-sm-3">Grade:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="Grade" />
+                        </div>
+                    </div>
+
+                    <!-- 學號 -->
+                    <div class="mb-3 row">
+                        <label for="student_id" class="form-label col-sm-3">Student ID:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="StudentID" />
+                        </div>
+                    </div>
+
+                    <!-- Gmail -->
+                    <div class="mb-3 row">
+                        <label for="student_gmail" class="form-label col-sm-3">Gmail:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" required name="Gmail" />
+                        </div>
+                    </div>
+
+                    <!-- 密碼 -->
+                    <div class="mb-3 row">
+                        <label for="password" class="form-label col-sm-3">Password:</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" required name="Password" />
+                        </div>
+                    </div>
+
+                    <!-- 確認密碼 -->
+                    <div class="mb-3 row">
+                        <label for="confirm_password" class="form-label col-sm-3">Confirm Password:</label>
+                        <div class="col-sm-9">
+                            <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <!-- 隱私權取用同意書 -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="privacy_policy" name="privacy_policy" required onclick="togglePrivacyContent()">
+                        <label class="form-check-label" for="privacy_policy">I agree to the personal information protection policy</label>
+                    </div>
+
+                    <!-- 註冊照片 -->
+                    <div class="mb-3 row">
+                        <label for="pic" class="form-label col-sm-3">上傳照片:</label>
+                        <div class="col-sm-9">
+                            <input type="file" name="pic" id="pic" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- 提交按鈕 -->
+                    <div class="mb-3">
+                        <input type="submit" value="註冊" class="btn btn-outline-secondary">
+                    </div>
+
+                    <h3>@ViewBag.Err</h3>
+
+                </form>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglePrivacyContent() {
+            // 获取图像和隐私权同意書的容器元素
+            var imageContainer = document.querySelector('.your-image-container-class');
+            var privacyContainer = document.querySelector('.privacy-policy-container');
+
+            // 切换图像和隐私权同意書的显示与隐藏
+            if (imageContainer.style.display !== 'none') {
+                imageContainer.style.display = 'none';
+                privacyContainer.style.display = 'block';
+            } else {
+                imageContainer.style.display = 'block';
+                privacyContainer.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+    
+</html>

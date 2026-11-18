@@ -1,0 +1,122 @@
+﻿@{
+    Layout = null;
+}
+<!-- 最一開始的登入頁面 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            position: relative;
+            min-height: 105vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            background-color: #E6E6FA;
+        }
+
+        .title {
+            position: absolute;
+            top: 8px; /*上面*/
+            left: 42.5%;
+            color: #333; /* 將字體顏色設定為深灰色 */
+            font-size: 4em; /* 調整字體大小 */
+            font-weight: bold; /* 加粗字體 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字陰影效果 */
+        }
+
+        .container {
+            display: flex;
+        }
+
+        h3 {
+            color: #dc3545;
+            font-size: 14px;
+        }
+
+        .student-box {
+            flex: 0 1 300px;
+            height: 600px;
+            text-align: center;
+            cursor: pointer;
+            padding: 50px; /* 調整內邊距 */
+            margin: 30px; /* 調整外邊距 */
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 200px;
+            transition: transform 0.3s ease-out; /* 添加 transform 属性动画 */
+            background-color: #DDDDDD; /* 将背景颜色设置为 #cccccc */
+        }
+
+            .student-box:hover {
+                transform: translateY(-5px) scale(1.05); /* 在悬停时向上浮动 5px */
+            }
+
+
+            .student-box img {
+                width: 100%; /* 讓圖片寬度充滿父容器 */
+                height: auto; /* 保持圖片比例 */
+                margin-top: 20px;
+            }
+
+
+        .btn-teacher,
+        .btn-student {
+            font-family: 'Microsoft JhengHei', sans-serif;
+        }
+
+
+
+        button {
+            background-color: #f07b00;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #e56a00;
+            }
+    </style>
+
+
+</head>
+<body>
+    <form method="post" action="@Url.Action("TeacherLogin")" enctype="multipart/form-data">
+        <div class="container">
+            <h1 class="mt-5 mb-4 title">Facter</h1>
+
+            <!-- 教師登入註冊頁面 -->
+            <div class="student-box" onclick="toggleLoginForm('teacher-form')">
+                <div class="txt_shadow noselect"><h1>Teacher</h1></div>
+                <img src="~/images/teacher.png" alt="Teacher" class="img-fluid">
+                <div></div>
+                <div class="input-group">
+                    <input type="text" placeholder="Teacher ID" style="height: 30px;" required name="TeacherID">
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" style="height: 30px;" required name="Password">
+                </div>
+                <input type="submit" value="教師登入" class="btn btn-outline-secondary btn-teacher mt-3" />
+                <p><a href="@Url.Action("TeacherRegister")" class="btn btn-outline-secondary btn-teacher mt-3">教師註冊</a></p>
+                <h3>@ViewBag.Err</h3>
+            </div>
+            
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+# ===== Visual Studio / .NET 建置產物與 IDE 檔 =====
+.vs/
+[Bb]in/
+[Oo]bj/
+packages/
+*.user
+*.suo
+*.cache
+*.dll
+*.pdb
+
+# ===== 發佈設定（含部署密碼，絕不上傳）=====
+*.PublishSettings
+*.pubxml
+*.pubxml.user
+faceV.PublishSettings
+
+# ===== 資料庫檔（可能含個資）=====
+*.mdf
+*.ldf
+prjFaceV/App_Data/
+
+# ===== 真實人臉照片（生物特徵，絕不上傳）=====
+# 只保留空資料夾結構，不含任何照片
+prjFaceV/MemberFaceImages/*
+!prjFaceV/MemberFaceImages/.gitkeep
+prjFaceV/UpLoadFaceImages/*
+!prjFaceV/UpLoadFaceImages/.gitkeep
+prjFaceV/UploadFaceImages/*
+!prjFaceV/UploadFaceImages/.gitkeep
+
+# ===== 作業系統 =====
+.DS_Store
+Thumbs.db
+__MACOSX/
